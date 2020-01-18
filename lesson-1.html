@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+ <meta charset="UTF-8">
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <meta http-equiv="X-UA-Compatible" content="ie=edge">
+ <title>JS-1-lesson-1</title>
+ <style type="text/css">
+ p {
+  width: 700px;
+ }
+  button {
+   width: 100px;
+   height: 30px;
+   background-color: #fff;
+   outline: none;
+  }
+  button:active, button:focus {
+   background-color: #EBEDEF;
+  }
+  span {
+    background-color: #FAFCCE;
+  }
+ </style>
+<body>
+ <p>1. Задать температуру в градусах по Цельсию. Вывести в alert соответствующую температуру в градусах по Фаренгейту. Подсказка: расчёт идёт по формуле: Tf = (9 / 5) * Tc + 32, где Tf – температура по Фаренгейту, Tc – температура по Цельсию</p>
+ <button onclick="task1()">Задание 1</button>
+ <p>2.Работа с переменными.<br>   
+ a) Объявить две переменные: admin и name. Записать в name строку «Василий»;<br>
+ b) Скопировать значение из name в admin. Вывести admin (должно вывести «Василий»).</p> 
+ <button onclick="task2()">Задание 2</button>
+ <p>4. *Чему будет равно JS-выражение 1000 + "108"?</p>
+ <button onclick="task4()">Задание 4</button>
+ <p>5. *Самостоятельно разобраться с атрибутами тега script (async и defer).</p>
+ <button onclick="task5()">Задание 5</button>
+ <p>1. Пример подключения async:<br><span>&#60;script async src="js/main.js"&#62;&#60;/script&#62;</span><br><br>С атрибутом async содержимое страницы HTML загружается одновременно с выполнением js-скрипта, подключённого из внешнего файла. Указанный в атрибуте src файл будет выполняться без ожидания загрузки и отображения веб-страницы. И поэтому загрузку HTML нет необходимости останавливать, когда парсинг достигает тега &#60;script&#62;. Работает этот атрибут только для внешне подключённого js-файла.</p>
+ <p>2. Пример подключения defer:<br><span>&#60;script defer src="js/main.js"&#62;&#60;/script&#62;</span><br><br>Атрибут defer откладывает выполнение js-скрипта до тех пор, пока не будет загружена полностью вся страница HTML. И даже если файл скрипта будет полностью загружен ещё до того, как парсер закончит работу, он не будет выполнен до тех
+пор, пока парсер не откроет страницу HTML  до конца. <br> В браузере Firefox 3.6 и старше атрибут defer игнорируется, если у тега &#60;script&#62; не указан атрибут src. В браузере Firefox 3.5 defer работает даже для встроенных скриптов.</p>
+ <script>  
+  function task1() {
+   var Tc = +prompt('Температура в градусах Цельсия', 25)
+   var Tf = (9 / 5) * Tc + 32
+   console.log('Температура в градусах Фаренгейт = ' + Tf.toFixed(1))
+  }
+
+  function task2() {
+    var name
+    var admin
+    name = prompt(name, 'Василий')
+    console.log('name ' + name)
+    admin = name
+    console.log('admin ' + admin)
+   }
+
+   function task4() {
+     console.log(1000 + "108")
+    }
+
+    function task5() {
+      console.log('С атрибутом async происходит одновременная загрузка html и js файлов,')
+      console.log('с атрибутом defer вначале полностью загружается html, а потом выполнится js-скрипт.')
+     }
+ </script>
+</body>
+</html>
