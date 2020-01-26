@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>JS-1-lesson-2</title>
+    <style type="text/css">
+        p {
+            width: 700px;
+        }
+
+        button {
+            width: 100px;
+            height: 30px;
+            background-color: #fff;
+            outline: none;
+        }
+
+        button:active,
+        button:focus {
+            background-color: #EBEDEF;
+        }
+
+        span {
+            background-color: #FAFCCE;
+        }
+    </style>
+</head>
+
+<body>
+    <p>1. Дан код: var a = 1, b = 1, c, d;<br> c = ++a; alert(c); // 2<br> d = b++; alert(d); // 1<br> c = (2+ ++a); alert(c); // 5<br> d = (2+ b++); alert(d); // 4<br> alert(a); // 3<br> alert(b); // 3<br> Почему код даёт именно такие результаты?</p>
+    <button onclick="task1()">Задание 1</button>
+    <p>2. Чему будет равен x в примере ниже?<br> var a = 2;<br> var x = 1 + (a *= 2);</p>
+    <button onclick="task2()">Задание 2</button>
+    <p>3. Объявить две целочисленные переменные a и b и задать им произвольные начальные значения.<br> Затем написать скрипт, который работает по следующему принципу:<br> если a и b положительные, вывести их разность;<br> если а и b отрицательные, вывести их произведение;<br> если а и b разных знаков, вывести их сумму; ноль можно считать положительным числом.</p>
+    <button onclick="task3()">Задание 3</button>
+    <p>4. Присвоить переменной а значение в промежутке [0..15]. <br>С помощью оператора switch организовать вывод чисел от a до 15.</p>
+    <button onclick="task4()">Задание 4</button>
+    <p>5. Реализовать основные 4 арифметические операции в виде функций с двумя параметрами. <br>Обязательно использовать оператор return.</p>
+    <button onclick="task5()">Задание 5</button>
+    <p>6. Реализовать функцию с тремя параметрами: function mathOperation(arg1, arg2, operation), <br>где arg1, arg2 – значения аргументов, operation – строка с названием операции.<br> В зависимости от переданного значения операции выполнить одну из арифметических операций (использовать функции из пункта 5) и вернуть полученное значение (использовать switch).</p>
+    <button onclick="task6()">Задание 6</button>
+    <p>7) *Сравнить null и 0. Попробуйте объяснить результат.</p>
+    <button onclick="task7()">Задание 7</button>
+    <p>8) *С помощью рекурсии организовать функцию возведения числа в степень.<br> Формат: function power(val, pow), где val – заданное число, pow – степень.</p>
+    <button onclick="task8()">Задание 8</button>
+
+    <script>
+        function task1() {
+            var a = 1,
+                b = 1,
+                c, d
+            c = ++a
+            console.log(c + ' сразу прибавили две единицы из переменной a')
+            d = b++
+                console.log(d + ' здесь присваивается предыдущее (изначальное) значение b')
+            c = (2 + ++a)
+            console.log(c + ' к двум прибавили значение a из предыдущего удвоения плюс a')
+            d = (2 + b++)
+            console.log(d + ' к двум прибавили значение из предыдущего удвоения b')
+            console.log(a + ' здесь выводится значение переменной из строки c = (2+ ++a)')
+            console.log(b + ' здесь выводится результат из сложения b в строке d = (2+ b++)')
+        }
+
+        function task2() {
+            var a = 2
+            var x = 1 + (a *= 2)
+            console.log(x)
+        }
+
+        function task3() {
+            var a = +prompt('Укажите число a', 5)
+            var b = +prompt('укажите число b', 6)
+            if (a > 0 && b > 0) console.log(a - b)
+            if (a < 0 && b < 0) console.log(a * b)
+            if (a < 0 && b > 0 || a > 0 && b < 0) console.log(a + b)
+        }
+
+        function task4() {
+            a = +prompt('Укажите целое число в промежутке от 0 до 15', 9)
+            switch (a) {
+                case 0:
+                    console.log(a++)                    
+                case 1:
+                    console.log(a++)                   
+                case 2:
+                    console.log(a++)                   
+                case 3:
+                    console.log(a++)                    
+                case 4:
+                    console.log(a++)                   
+                case 5:
+                    console.log(a++)                    
+                case 6:
+                    console.log(a++)                   
+                case 7:
+                    console.log(a++)                    
+                case 8:
+                    console.log(a++)                    
+                case 9:
+                    console.log(a++)                    
+                case 10:
+                    console.log(a++)                   
+                case 11:
+                    console.log(a++)                    
+                case 12:
+                    console.log(a++)                    
+                case 13:
+                    console.log(a++)                    
+                case 14:
+                    console.log(a++)                    
+                case 15:
+                    console.log(a)
+                    break
+                default:
+                    console.log('Значение переменной a задано не правильно')
+                    break
+            }
+        }
+
+        function task5() {
+            function addition(x, y) {
+                return (x + y)
+            }
+
+            function subtraction(x, y) {
+                return (x - y)
+            }
+
+            function multiplication(x, y) {
+                return (x * y)
+            }
+
+            function division(x, y) {
+                return (x / y)
+            }
+            console.log(addition(1, 2))
+            console.log(subtraction(1, 2))
+            console.log(multiplication(1, 2))
+            console.log(division(1, 2))
+        }
+
+        function task6() {
+            function mathOperation(arg1, arg2, operation) {
+                switch (operation) {
+                    case 'addition':
+                        console.log(arg1 + arg2)
+                        break
+                    case 'subtraction':
+                        console.log(arg1 - arg2)
+                        break
+                    case 'multiplication':
+                        console.log(arg1 * arg2)
+                        break
+                    case 'division':
+                        console.log(arg1 - arg2)
+                        break
+                }
+            }
+            console.log(mathOperation(3, 4, 'multiplication'))
+        }
+
+        function task7() {
+            function compare_numbers(x, y) {
+                if (x > y)
+                    console.log("null > 0");
+                else if (x < y)
+                    console.log("null < 0");
+                else
+                    console.log("null = 0");
+            }
+            compare_numbers(null, 0);
+            console.log('В JavaScript null - специальное значение, которое указывает, что "значение переменной неизвестно". В примере x = null и равен нулю, так как ноль указывает на "нейтральное пустое" значение переменной y.')
+        }
+
+        function task8() {
+            function power(val, pow) {
+                var current = Math.pow(val, pow)
+                console.log('число ' + val)
+                console.log('степень возведения ' + pow)
+                return current
+            }
+            console.log(power(12, 4))
+        }
+    </script>
+</body>
+
+</html>
