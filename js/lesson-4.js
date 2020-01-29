@@ -8,6 +8,11 @@ function task1_1() {
     console.log('Hello from Task1 Var2.')
 }
 
+function task2() {
+    let base = second()
+    console.log('from Task2.')
+}
+
 
 // решение по заданию 1
 
@@ -50,7 +55,7 @@ let getNumbers = { ...objDigits
 
 // решение по заданию 2
 
-function task2() {
+function second() {
 
     let PRODUCT_NAMES = ['Процессор', 'Дисплей', 'Ноутбук', 'Мышь', 'Клавиатура']
     let PRICES = [100, 120, 1000, 15, 18]
@@ -78,5 +83,5 @@ function task2() {
 
     let b = 'Вы выбрали товар: ' + PRODUCT_NAMES[index] + ' стоимостью ' + PRICES[index] + ' единиц'
     console.log(b)
-    console.log('from Task2.')
+    
 }
