@@ -9,7 +9,7 @@ function task1_1() {
 }
 
 function task2() {
-    let base = second()
+    let base = cart()
     console.log('from Task2.')
 }
 
@@ -55,7 +55,7 @@ let getNumbers = { ...objDigits
 
 // решение по заданию 2
 
-function second() {
+function cart() {
 
     let PRODUCT_NAMES = ['Процессор', 'Дисплей', 'Ноутбук', 'Мышь', 'Клавиатура']
     let PRICES = [100, 120, 1000, 15, 18]
