@@ -1,11 +1,11 @@
 function task1() {
     console.log(getDigitsOfNumber())
-    console.log('Hello from Task1.')
+    console.log('from Task1.')
 }
 
 function task1_1() {
     console.log(getNumbers)
-    console.log('Hello from Task1 Var2.')
+    console.log('from Task1 Var2.')
 }
 
 function task2() {
