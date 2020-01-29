@@ -81,7 +81,7 @@ function cart() {
     let a = +prompt('Выберите товар по его номеру:\n' + 'Processor - 1,\nDisplay - 2,\nNotebook - 3,\nMouse - 4,\nKeyboard -5', 3)
     index = (a - 1)
 
-    let b = 'Вы выбрали товар: ' + PRODUCT_NAMES[index] + ' стоимостью ' + PRICES[index] + ' единиц'
+    let b = `Вы выбрали товар: ${PRODUCT_NAMES[index]} стоимостью ${PRICES[index]} единиц`
     console.log(b)
     
 }
