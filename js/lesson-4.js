@@ -1,26 +1,4 @@
 "use strict";
-let task1 = document.querySelector('.task1')
-task1.addEventListener('click', task_1)
-
-function task_1() {
-    console.log(getDigitsOfNumber())
-    console.log('from Task1.')
-}
-let task1_2 = document.querySelector('.task1_2')
-task1_2.addEventListener('click', task_1_2)
-
-function task_1_2() {
-    console.log(getNumbers)
-    console.log('from Task1 Var2.')
-}
-let task2 = document.querySelector('.task2')
-task2.addEventListener('click', task_2)
-
-function task_2() {
-    let base = cart()
-    console.log('from Task2.')
-}
-
 
 // решение по заданию 1
 
@@ -59,8 +37,6 @@ let getNumbers = { ...objDigits
 
 
 
-
-
 // решение по заданию 2
 
 function cart() {
@@ -92,4 +68,29 @@ function cart() {
     let b = `Вы выбрали товар: ${PRODUCT_NAMES[index]} стоимостью ${PRICES[index]} единиц`
     console.log(b)
 
+}
+
+
+// ------------------------------------------------ код загрузки страницы
+
+let task1 = document.querySelector('.task1')
+task1.addEventListener('click', task_1)
+
+function task_1() {
+    console.log(getDigitsOfNumber())
+    console.log('from Task1.')
+}
+let task1_2 = document.querySelector('.task1_2')
+task1_2.addEventListener('click', task_1_2)
+
+function task_1_2() {
+    console.log(getNumbers)
+    console.log('from Task1 Var2.')
+}
+let task2 = document.querySelector('.task2')
+task2.addEventListener('click', task_2)
+
+function task_2() {
+    let base = cart()
+    console.log('from Task2.')
 }
