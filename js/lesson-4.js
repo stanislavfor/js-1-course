@@ -1,14 +1,22 @@
-function task1() {
+"use strict";
+let task1 = document.querySelector('.task1')
+task1.addEventListener('click', task_1)
+
+function task_1() {
     console.log(getDigitsOfNumber())
     console.log('from Task1.')
 }
+let task1_2 = document.querySelector('.task1_2')
+task1_2.addEventListener('click', task_1_2)
 
-function task1_1() {
+function task_1_2() {
     console.log(getNumbers)
     console.log('from Task1 Var2.')
 }
+let task2 = document.querySelector('.task2')
+task2.addEventListener('click', task_2)
 
-function task2() {
+function task_2() {
     let base = cart()
     console.log('from Task2.')
 }
@@ -29,7 +37,7 @@ function getDigitsOfNumber() {
     obj.decades = Math.floor(digits / 10) % 10
     obj.hundreds = Math.floor(digits / 100)
 
-    uObj = new Object()
+    let uObj = new Object()
     uObj['‘единицы’'] = obj.units
     uObj['‘десятки’'] = obj.decades
     uObj['‘сотни’'] = obj.hundreds
@@ -79,9 +87,9 @@ function cart() {
     }
 
     let a = +prompt('Выберите товар по его номеру:\n' + 'Processor - 1,\nDisplay - 2,\nNotebook - 3,\nMouse - 4,\nKeyboard -5', 3)
-    index = (a - 1)
+    let index = (a - 1)
 
     let b = `Вы выбрали товар: ${PRODUCT_NAMES[index]} стоимостью ${PRICES[index]} единиц`
     console.log(b)
-    
+
 }
