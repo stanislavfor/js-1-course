@@ -1,0 +1,23 @@
+
+        p {
+            width: 700px;
+            display: block;
+        }
+
+        button {
+            width: 100px;
+            height: 30px;
+            background-color: #fff;
+            outline: none;
+        }
+
+        button:active,
+        button:focus {
+            background-color: #EBEDEF;
+        }
+
+        a {
+            color: black;
+        }
+ 
+
