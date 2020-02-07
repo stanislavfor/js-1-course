@@ -1,3 +1,8 @@
+.main {
+    position: relative;
+    width: 1400px;
+}
+
 p {
     width: 700px;
     display: block;
@@ -37,7 +42,25 @@ a {
     height: 50px;
     color: white;
     position: absolute;
-    top: 15px;    
-    right: 60px;     
+    top: 15px;
+    right: 280px;
 }
 
+#cart_items {
+    position: absolute;
+    top: 100px;
+    right: 10px;
+}
+
+.hidden {
+    display: none;
+}
+
+.product-item-cart {
+    width: 220px;
+    height: 170px;
+    border: 1px solid grey;
+    border-radius: 5px;
+    margin-right: 20px;
+    margin-bottom: 10px;
+}
