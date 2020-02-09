@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>JS-1-lesson-7</title>
+    <link rel="stylesheet" href="style/style.css">
+</head>
+
+<body>
+    <h3>Домашнее задание к уроку 7</h3>
+    <p>Реализовать модель canvas</p>
+    <br>
+    <div id="app">
+        <div class="nav">
+            <div class="coordinates">
+                <p id="x"><b>x: </b> <span id="x-coord"></span> px</p>
+                <p id="y"><b>y: </b> <span id="y-coord"></span> px</p>
+            </div>
+            <div class="tools">
+                <button name="tool-button" data-name='pencil'>Pencil -></button>
+                <input type="color" name="input-obj-pencil" data-name="color-pencil">
+                <button name="tool-button" data-name='brush'>Brush -></button>
+                <input type="color" name="input-obj-brush" data-name="color-brush">
+                <button name="tool-button" data-name='fill'>Fill -></button>
+                <input type="color" name="input-obj-fill" data-name="color-fill">
+                <select name="input-obj" data-name="size">
+                    <option>5</option>
+                    <option>10</option>
+                    <option>15</option>
+                    <option>20</option>
+                    <option>30</option>
+                    <option>50</option>
+                    <option>100</option>
+                </select>
+                <select name="input-obj" data-name="font">
+                    <option>Arial</option>
+                    <option>Couriere</option>
+                    <option>Cambira</option>
+                    <option>ARIAL BLACK</option>
+                </select>
+                <button class="save_button" name="save-button" data-name="save-button">Save PNG</button>
+            </div>
+        </div>
+        <div class="canv">
+            <canvas id="canv" width="1000" height="700"></canvas>
+        </div>
+    </div>
+
+    <script src="js/lesson-7.js"></script>
+</body>
+
+</html>
