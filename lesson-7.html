@@ -20,13 +20,9 @@
                 <p id="y"><b>y: </b> <span id="y-coord"></span> px</p>
             </div>
             <div class="tools">
-                <button name="tool-button" data-name='pencil'>Pencil -></button>
+                <button class="tools_button" name='tool-button' data-name='pencil'>Pencil -> </button>
                 <input type="color" name="input-obj-pencil" data-name="color-pencil">
-                <button name="tool-button" data-name='brush'>Brush -></button>
-                <input type="color" name="input-obj-brush" data-name="color-brush">
-                <button name="tool-button" data-name='fill'>Fill -></button>
-                <input type="color" name="input-obj-fill" data-name="color-fill">
-                <select name="input-obj" data-name="size">
+                <select name="input-obj" data-name="size-pencil">
                     <option>5</option>
                     <option>10</option>
                     <option>15</option>
@@ -34,7 +30,29 @@
                     <option>30</option>
                     <option>50</option>
                     <option>100</option>
-                </select>
+                </select>                
+                <button class="tools_button" name='tool-button' data-name='brush'>Brush -></button>
+                <input type="color" name="input-obj-brush" data-name="color-brush">
+                <select name="input-obj" data-name="size-brush">
+                    <option>5</option>
+                    <option>10</option>
+                    <option>15</option>
+                    <option>20</option>
+                    <option>30</option>
+                    <option>50</option>
+                    <option>100</option>
+                </select>                
+                <button class="tools_button" name='tool-button' data-name='fill'>Fill -></button>
+                <input type="color" name="input-obj-fill" data-name="color-fill">
+                <!--<select name="input-obj" data-name="size">
+                    <option>5</option>
+                    <option>10</option>
+                    <option>15</option>
+                    <option>20</option>
+                    <option>30</option>
+                    <option>50</option>
+                    <option>100</option>
+                </select>-->
                 <select name="input-obj" data-name="font">
                     <option>Arial</option>
                     <option>Couriere</option>

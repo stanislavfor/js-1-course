@@ -10,13 +10,10 @@ p {
 
 button {
     width: 100px;
-    height: 36px;
     background-color: #fff;
     outline: none;
     border: 2px solid black;
-    /*padding: 5px 15px;  */
     color: #000;
-    margin-bottom: -2px;
 }
 
 button:active,
@@ -54,6 +51,20 @@ p {
 }
 
 .tools {
+    display: flex;
+    flex-direction: row;
     background: #DDDAD4;
-    height: 30px;
+    height: 27px;
+}
+
+.tools_button {
+    margin-left: 10px;
+}
+
+.tools_button:first-child {
+    margin-left: 0;
+}
+
+.save_button {
+    margin-left: 10px;
 }

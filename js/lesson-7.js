@@ -13,10 +13,9 @@ let editor = {
     width: canvas.getAttribute('width'),
     height: canvas.getAttribute('height'),
     currentTool: null,
-    "current-color-pencil": '#000',
-    "current-color-brush": '#000',
-    "current-color-fill": '#000',
-    "current-size": 5,
+    "color": '#000',
+    "current-size-pencil": 5,
+    "current-size-brush": 5,
     "current-font": 'Arial',
     x: 0,
     y: 0,
@@ -87,14 +86,14 @@ let editor = {
     _drawPencil() {
         canvas.onmousemove = () => {
             ctx.fillStyle = [pencilColor]
-            ctx.fillRect(editor.x, editor.y, editor['current-size'], editor['current-size'])
+            ctx.fillRect(editor.x, editor.y, editor['current-size-pencil'], editor['current-size-pencil'])
         }
     },
     _drawBrush() {
         canvas.onmousemove = () => {
             ctx.fillStyle = [brushColor]
             ctx.beginPath()
-            ctx.ellipse(editor.x, editor.y, editor['current-size'], editor['current-size'], Math.PI / 4, 0, 2 * Math.PI)
+            ctx.ellipse(editor.x, editor.y, editor['current-size-brush'], editor['current-size-brush'], Math.PI / 4, 0, 2 * Math.PI)
             ctx.fill()
         }
     },
