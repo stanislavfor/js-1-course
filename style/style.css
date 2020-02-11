@@ -1,0 +1,68 @@
+.main {
+    position: relative;
+    width: 1400px;
+}
+
+p {
+    width: 700px;
+    display: block;
+}
+
+button {
+    width: 100px;
+    background-color: #fff;
+    outline: none;
+    border: 2px solid black;
+    color: #000;
+}
+
+button:active,
+button:focus {
+    background-color: #EBEDEF;
+}
+
+a {
+    color: black;
+}
+
+
+#canv {
+    border: 1px solid black;
+    width: 1000px;
+    height: 700px;
+}
+
+.coordinates {
+    padding-left: 20px;
+    width: 100px;
+    display: block;
+}
+
+p {
+    margin: 0;
+}
+
+.nav {
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 15px;
+}
+
+.tools {
+    display: flex;
+    flex-direction: row;
+    background: #DDDAD4;
+    height: 27px;
+}
+
+.tools_button {
+    margin-left: 10px;
+}
+
+.tools_button:first-child {
+    margin-left: 0;
+}
+
+.save_button {
+    margin-left: 10px;
+}
