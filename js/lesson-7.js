@@ -66,7 +66,7 @@ let editor = {
             evt.target.dataset.name === 'color-fill' ? fillColor = editor['current-color-fill'] : fillColor = fillColor
         }
         if (evt.target.name === 'input-obj') {
-            editor[`current-${evt.target.dataset.name}`] = evt.target.value            
+            editor[`current-${evt.target.dataset.name}`] = evt.target.value
         }
 
         /*
