@@ -1,0 +1,221 @@
+.main {
+    position: relative;
+    width: 1400px;
+}
+
+p {
+    width: 700px;
+    display: block;
+}
+
+button {
+    width: 100px;
+    height: 30px;
+    background-color: #fff;
+    outline: none;
+    position: relative;
+}
+
+button:active,
+button:focus {
+    background-color: #EBEDEF;
+}
+
+a {
+    color: black;
+}
+
+.product-item {
+    width: 200px;
+    height: 300px;
+    border: 1px solid grey;
+    border-radius: 5px;
+    margin-right: 20px;
+    margin-bottom: 10px;
+    padding-top: 5px;
+}
+
+.desc {
+    width: 200px;
+    padding-left: 25px;
+}
+
+.item_image {
+    width: 200px;
+    height: 150px;
+}
+
+#cart {
+    width: 650px;
+    height: 50px;
+    color: white;
+    position: absolute;
+    top: 15px;
+    right: 280px;
+}
+
+/* элементы стилей корзины из script js переписанные в стили css */
+/*
+document.querySelector('#cart_items').style.background = 'lightgrey'
+document.querySelector('#cart_items').style.width = '220px'
+document.querySelector('#cart_items').style.height = '170px'
+*/
+
+#cart_items {
+    position: absolute;
+    top: 100px;
+    right: 10px;
+    background: 'lightgrey';
+    width: 220px;
+    height: 170px;
+    transition: all 0.8 easy;
+}
+
+.hidden {
+    display: none;
+    transition: all 0.8 easy;
+}
+
+.product-item-cart {
+    width: 220px;
+    height: 170px;
+    border: 1px solid grey;
+    border-radius: 5px;
+    margin-right: 20px;
+    margin-bottom: 10px;
+}
+
+.box_gallery {
+    margin-bottom: 80px;
+}
+
+.nav_gallery {
+    width: 1400px;
+    background: black;
+    display: inline-flex;
+    justify-content: center;
+    margin-top: 50px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+.gallery_wrapper {
+    display: flex;
+    flex-direction: row;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+#roulette {
+    width: 700px;
+    margin-top: 60px;
+    /*    margin-right: 80px;*/
+    margin-left: 50px;
+}
+
+#gallery {
+    display: flex;
+    flex-direction: row;
+}
+
+.gallery_images {
+    padding-top: 20px;
+}
+
+/* элементы стилей корзины из script js переписанные в стили css */
+
+/*
+let newNav = document.getElementsByClassName('nav')
+newNav[0].style.background = 'black'
+newNav[0].style.width = '1400px'
+newNav[0].style.height = '50px'
+newNav[0].style.marginTop = '50px'
+newNav[0].style.position = 'relative'
+
+let newLogo = document.getElementsByClassName('logo')
+newLogo[0].innerText = 'E-SHOP'
+newLogo[0].style.paddingTop = '13px'
+newLogo[0].style.color = 'white'
+newLogo[0].style.marginLeft = '50px'
+
+let newCartButton = document.getElementsByClassName('btn_cart')
+newCartButton[0].type = 'submit'
+newCartButton[0].value = 'Корзина'
+newCartButton[0].style.background = 'black'
+newCartButton[0].style.color = 'white'
+newCartButton[0].style.border = '2px solis white'
+newCartButton[0].style.width = '80px'
+newCartButton[0].style.height = '30px'
+newCartButton[0].style.borderRadius = '5px'
+newCartButton[0].style.position = 'absolute'
+newCartButton[0].style.right = '40px'
+newCartButton[0].style.top = '10px'
+newCartButton[0].onmouseover = function () {
+    this.style.backgroundColor = 'white'
+    this.style.color = 'black'
+    this.style.border = '2px solid white'
+}
+newCartButton[0].onmouseout = function () {
+    this.style.backgroundColor = 'black'
+    this.style.color = 'green'
+    this.style.border = '2px solid green'
+}
+
+let newWrapper = document.getElementsByTagName('section')
+newWrapper[0].style.display = 'flex'
+newWrapper[0].style.flexFlow = 'row wrap'
+newWrapper[0].style.justifyContent = 'space-around'
+newWrapper[0].style.width = '1000px'
+newWrapper[0].style.margin = '100px'
+*/
+
+
+.nav {
+    background: black;
+    width: 1400px;
+    height: 50px;
+    margin-top: 50px;
+    position: relative;
+}
+
+.logo {
+    padding-top: 13px;
+    color: white;
+    margin-left: 50px;
+}
+
+.btn_cart {
+    background: black;
+    color: white;
+    border: 2px solid white;
+    width: 80px;
+    height: 30px;
+    border-radius: 5px;
+    position: absolute;
+    right: 40px;
+    top: 10px;
+    transition: all 0.5s easy;
+}
+
+.btn_cart:hover {
+    background: white;
+    color: black;
+    border: 2px solid white;
+    transition: all 0.5s easy;
+}
+
+section {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-around;
+    width: 1000px;
+    margin: 100px;
+}
+
+#arrow-left::before {
+    content: "назад";
+}
+
+#arrow-right::after {
+    content: "вперед";
+}
