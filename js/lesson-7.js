@@ -66,14 +66,15 @@ let editor = {
             evt.target.dataset.name === 'color-fill' ? fillColor = editor['current-color-fill'] : fillColor = fillColor
         }
         if (evt.target.name === 'input-obj') {
-            editor[`current-${evt.target.dataset.name}`] = evt.target.value
-            //evt.target.dataset.name === 'color' ? ctx.fillStyle = editor['current-color'] : ctx.fillStyle = ctx.fillStyle
+            editor[`current-${evt.target.dataset.name}`] = evt.target.value            
         }
 
-        /*if (evt.target.id === 'select-color' || evt.target.id === 'select-size') {
+        /*
+        if (evt.target.id === 'select-color' || evt.target.id === 'select-size') {
          evt.target.id === 'select-color' ? editor.currentColor = evt.target.value : editor.brushSize = evt.target.value
         if (evt.target.id === 'select-color') ctx.fillStyle = editor.currentColor
-     }*/
+         }
+         */
     },
     startDraw() {
         if (editor.currentTool === 'pencil') editor._drawPencil()

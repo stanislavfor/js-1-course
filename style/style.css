@@ -25,14 +25,11 @@ a {
     color: black;
 }
 
-.canv {
-    margin-top: 15px;
-}
 
-#canv {
+#canv {     
+    border: 1px solid black;
     width: 1000px;
     height: 700px;
-    border: 1px solid black
 }
 
 .coordinates {
@@ -48,6 +45,7 @@ p {
 .nav {
     display: flex;
     flex-direction: row;
+    margin-bottom: 15px;
 }
 
 .tools {
